@@ -1,0 +1,123 @@
+﻿@model Entity_Layer.Create_NewSession
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Create_NewSession</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PrimaryID" class="control-label"></label>
+                <input asp-for="PrimaryID" class="form-control" />
+                <span asp-validation-for="PrimaryID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SessionID" class="control-label"></label>
+                <input asp-for="SessionID" class="form-control" />
+                <span asp-validation-for="SessionID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JsID" class="control-label"></label>
+                <input asp-for="JsID" class="form-control" />
+                <span asp-validation-for="JsID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JsName" class="control-label"></label>
+                <input asp-for="JsName" class="form-control" />
+                <span asp-validation-for="JsName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MentorID" class="control-label"></label>
+                <input asp-for="MentorID" class="form-control" />
+                <span asp-validation-for="MentorID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MentorName" class="control-label"></label>
+                <input asp-for="MentorName" class="form-control" />
+                <span asp-validation-for="MentorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseID" class="control-label"></label>
+                <input asp-for="CourseID" class="form-control" />
+                <span asp-validation-for="CourseID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseName" class="control-label"></label>
+                <input asp-for="CourseName" class="form-control" />
+                <span asp-validation-for="CourseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SessionDateTime" class="control-label"></label>
+                <input asp-for="SessionDateTime" class="form-control" />
+                <span asp-validation-for="SessionDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AmountPerHour" class="control-label"></label>
+                <input asp-for="AmountPerHour" class="form-control" />
+                <span asp-validation-for="AmountPerHour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SessionHappenedID" class="control-label"></label>
+                <input asp-for="SessionHappenedID" class="form-control" />
+                <span asp-validation-for="SessionHappenedID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SessionHappenedDateTime" class="control-label"></label>
+                <input asp-for="SessionHappenedDateTime" class="form-control" />
+                <span asp-validation-for="SessionHappenedDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOShowSessionID" class="control-label"></label>
+                <input asp-for="NOShowSessionID" class="form-control" />
+                <span asp-validation-for="NOShowSessionID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOShowSessionJs_ID" class="control-label"></label>
+                <input asp-for="NOShowSessionJs_ID" class="form-control" />
+                <span asp-validation-for="NOShowSessionJs_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOShowSessionJs_DateTime" class="control-label"></label>
+                <input asp-for="NOShowSessionJs_DateTime" class="form-control" />
+                <span asp-validation-for="NOShowSessionJs_DateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOShowSessionJs_Reason" class="control-label"></label>
+                <input asp-for="NOShowSessionJs_Reason" class="form-control" />
+                <span asp-validation-for="NOShowSessionJs_Reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOShowSessionMentor_ID" class="control-label"></label>
+                <input asp-for="NOShowSessionMentor_ID" class="form-control" />
+                <span asp-validation-for="NOShowSessionMentor_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOShowSessionMentor_DateTime" class="control-label"></label>
+                <input asp-for="NOShowSessionMentor_DateTime" class="form-control" />
+                <span asp-validation-for="NOShowSessionMentor_DateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOShowSessionMentor_Reason" class="control-label"></label>
+                <input asp-for="NOShowSessionMentor_Reason" class="form-control" />
+                <span asp-validation-for="NOShowSessionMentor_Reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
